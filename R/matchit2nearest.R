@@ -306,7 +306,7 @@ matchit2nearest <- function(treat, data, distance, discarded,
   lab <- names(treat)
   lab1 <- lab[treat == 1]
 
-  if (!is.null(distance)) {
+  if (!is.null(distance) & length(distance) > length(treat)) {
     names(distance) <- names(treat)
   }
 
